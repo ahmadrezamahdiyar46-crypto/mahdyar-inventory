@@ -3,4 +3,4 @@
 window.MAHDYAR_SUPABASE_URL = 'https://kpwbhlquirgskzybunnr.supabase.co';
 window.MAHDYAR_SUPABASE_ANON_KEY = 'sb_publishable_KHGTw9cUwUAtlKx_g179zw_PujnwOLx';
 // همان ایمیلی را وارد کن که در Supabase > Authentication > Users برای حساب مشترک ساختی.
-window.MAHDYAR_AUTH_EMAIL = 'ایمیل-حساب-مشترک-را-اینجا-وارد-کنید';
+window.MAHDYAR_AUTH_EMAIL = 'example@gmail.com';
