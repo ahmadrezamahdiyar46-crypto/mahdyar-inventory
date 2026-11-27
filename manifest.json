@@ -1,12 +1,12 @@
 {
-  "name": "انبار هیئت گروه جهادی مهدیار",
+  "name": "سامانه مدیریت انبار هیئت مهدیار",
   "short_name": "انبار مهدیار",
   "lang": "fa",
   "dir": "rtl",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#f4f2e9",
-  "theme_color": "#075f4d",
+  "background_color": "#F4F1E8",
+  "theme_color": "#102B27",
   "icons": [
     {
       "src": "icon.png",
