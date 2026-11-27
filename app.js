@@ -1,7 +1,7 @@
 const DB='mahdyar_db', STORE='data'; let db, items=[], loans=[], letters=[], editingId=null;
 const $=id=>document.getElementById(id);
 const fa=n=>Number(n||0).toLocaleString('fa-IR');
-const today=()=>new Date().toISOString().slice(0,10);
+const today=()=>{const p=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Tehran',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());const v=Object.fromEntries(p.map(x=>[x.type,x.value]));return `${v.year}-${v.month}-${v.day}`};
 function openDB(){return new Promise((resolve,reject)=>{let r=indexedDB.open(DB,1);r.onupgradeneeded=()=>r.result.createObjectStore(STORE);r.onsuccess=()=>{db=r.result;resolve()};r.onerror=()=>reject(r.error)})}
 function readAll(){return new Promise(resolve=>{let t=db.transaction(STORE,'readonly').objectStore(STORE).get('app');t.onsuccess=()=>{let d=t.result||{};items=d.items||[];loans=d.loans||[];letters=d.letters||[];resolve()}})}
 function persist(){return new Promise(resolve=>{let t=db.transaction(STORE,'readwrite');t.objectStore(STORE).put({items,loans,letters},'app');t.oncomplete=resolve})}
